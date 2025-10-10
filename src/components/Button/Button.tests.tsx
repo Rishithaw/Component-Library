@@ -4,7 +4,7 @@ import {Button} from './Button';
 
 test('renders Button with label', () => {
   render(<Button label="Test Button" />);
-  expect(screen.getByText('Click Me')).toBeInTheDocument();
+  expect(screen.getByText('Test Button')).toBeInTheDocument();
 });
 
 test('Button has grey background when disabled', () => {
