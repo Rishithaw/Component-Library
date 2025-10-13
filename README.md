@@ -5,15 +5,15 @@
 
 ---
 
-## 🧭 Overview
-This project is a **UI Component Library** built using **React**, **TypeScript**, **Styled Components**, and **Storybook**.
+## Overview
+This project is a **UI Component Library** built using **React**, **TypeScript**, **Styled Components** and **Storybook**.
 It demonstrates the ability to create, test, and deploy modular, reusable UI components in a containerized environment.
 
 The final application is packaged in a **Docker container** and served via **NGINX** on **localhost:8083**.
 
 ---
 
-## 🧩 Features
+## Features
 The component library includes the following **responsive and interactive components**:
 - **Button** (default & disabled states)
 - **Label**
@@ -29,9 +29,10 @@ The component library includes the following **responsive and interactive compon
 - **Hero Image**
 - **Card**
 
-## ⚙️ Project Setup Instructions
+## Project Setup Instructions
 
 ### 1. Install Docker Desktop
+Make sure Docker Desktop is installed and running on your system.
 
 ### 2. 📦 Clone the repository
 ```bash
@@ -48,9 +49,12 @@ npm run Storybook
 ### 5. Build the Docker image:
 docker build -t wickramasinghe_rishitha_coding_assignment12
 
-5. Run the container with the required name and port mapping:
+### 6. Run the container with the required name and port mapping:
 docker run -p 8083:8083 --name wickramasinghe_rishitha_coding_assignment12 wickramasinghe_rishitha_coding_assignment12
 
-6. Once the container starts, open a browser of your choice and visit:
+### 7. Once the container starts, open a browser of your choice and visit:
 http://127.0.0.1:8083/
 (You should see all the components you saw in the storybook)
+
+### 8. To run tests
+npm test
