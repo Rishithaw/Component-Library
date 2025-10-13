@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {DropdownProps} from './Dropdown.type';
+import {DropdownProps} from './Dropdown.types';
 
 const StyledSelect = styled.select<{ disabled?: boolean }>`
   padding: 8px 12px;

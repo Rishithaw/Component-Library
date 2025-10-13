@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TextProps } from './Text.type';
+import { TextProps } from './Text.types';
 
 const StyledText = styled.p<{ color?: string; size?: string; disabled?: boolean }>`
   color: ${(props) => (props.disabled ? '#aaa' : props.color || '#000')};

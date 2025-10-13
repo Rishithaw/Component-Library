@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TableProps } from './Table.type';
+import { TableProps } from './Table.types';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
 import { TableCell } from './TableCell';

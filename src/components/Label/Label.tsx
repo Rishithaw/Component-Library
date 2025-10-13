@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { LabelProps } from "./Label.type";
+import { LabelProps } from "./Label.types";
 
 const StyledLabel = styled.label<{ color?: string; disabled?: boolean }>`
 display: inline-block;
