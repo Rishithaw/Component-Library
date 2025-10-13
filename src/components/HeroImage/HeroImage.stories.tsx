@@ -19,7 +19,7 @@ type Story = StoryObj<typeof HeroImage>;
 export const Default: Story = {
   args: {
     backgroundImage:
-      'https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80',
+      '/Image.jpg',
     title: 'Welcome to Our Site',
     subtitle: 'We make amazing things happen',
     disabled: false,
