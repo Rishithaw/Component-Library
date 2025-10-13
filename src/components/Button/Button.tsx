@@ -18,3 +18,5 @@ export const Button: React.FC<ButtonProps> = ({ label, disabled, backgroundColor
     </StyledButton>
   );
 };
+
+export default Button;
