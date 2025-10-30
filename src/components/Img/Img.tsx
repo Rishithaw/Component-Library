@@ -11,6 +11,20 @@ const StyledImg = styled.img<{ disabled?: boolean }>`
   border-radius: 8px;
 `;
 
-export const Img: React.FC<ImgProps> = ({ src, alt, width, height, disabled }) => {
-  return <StyledImg src={src} alt={alt} width={width} height={height} disabled={disabled} />;
+export const Img: React.FC<ImgProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  disabled,
+}) => {
+  return (
+    <StyledImg
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      disabled={disabled}
+    />
+  );
 };

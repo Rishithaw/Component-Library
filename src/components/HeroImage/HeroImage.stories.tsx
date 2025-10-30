@@ -18,8 +18,7 @@ type Story = StoryObj<typeof HeroImage>;
 
 export const Default: Story = {
   args: {
-    backgroundImage:
-      '/Image.jpg',
+    backgroundImage: '/Image.jpg',
     title: 'Welcome to Our Site',
     subtitle: 'We make amazing things happen',
     disabled: false,

@@ -1,4 +1,5 @@
 # 📘 Assignment 12: Web Component Library
+
 **Author:** Rishitha Wickramasinghe
 **Course:** Business Systems Development
 **Assignment:** Component Library using React, Storybook & Docker
@@ -6,6 +7,7 @@
 ---
 
 ## Overview
+
 This project is a **UI Component Library** built using **React**, **TypeScript**, **Styled Components** and **Storybook**.
 It demonstrates the ability to create, test, and deploy modular, reusable UI components in a containerized environment.
 
@@ -14,7 +16,9 @@ The final application is packaged in a **Docker container** and served via **NGI
 ---
 
 ## Features
+
 The component library includes the following **responsive and interactive components**:
+
 - **Button** (default & disabled states)
 - **Label**
 - **Text**
@@ -32,9 +36,11 @@ The component library includes the following **responsive and interactive compon
 ## Project Setup Instructions
 
 ### 1. Install Docker Desktop
+
 Make sure Docker Desktop is installed and running on your system.
 
 ### 2. 📦 Clone the repository
+
 ```bash
 git clone <https://github.com/Rishithaw/Component-Library>
 cd component-library
@@ -58,3 +64,4 @@ http://127.0.0.1:8083/
 
 ### 8. To run tests
 npm test
+```

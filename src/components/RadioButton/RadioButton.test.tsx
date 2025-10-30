@@ -8,7 +8,9 @@ test('renders RadioButton with label', () => {
 });
 
 test('RadioButton is disabled when disabled prop is true', () => {
-  render(<RadioButton label="Disabled Option" name="test" value="2" disabled />);
+  render(
+    <RadioButton label="Disabled Option" name="test" value="2" disabled />,
+  );
   const radio = screen.getByRole('radio');
   expect(radio).toBeDisabled();
 });

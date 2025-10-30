@@ -15,7 +15,7 @@ test('renders table with header and row', () => {
           <TableCell>Alice</TableCell>
         </TableRow>
       </tbody>
-    </Table>
+    </Table>,
   );
 
   expect(screen.getByText('Name')).toBeInTheDocument();

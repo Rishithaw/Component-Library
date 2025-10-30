@@ -1,6 +1,6 @@
-import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom'
-import {Label} from './Label';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { Label } from './Label';
 
 test('renders Label with text', () => {
   render(<Label text="Username" />);

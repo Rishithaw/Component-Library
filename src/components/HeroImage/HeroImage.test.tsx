@@ -8,7 +8,7 @@ test('renders HeroImage with title', () => {
       backgroundImage="test.jpg"
       title="Hello World"
       subtitle="Subtext"
-    />
+    />,
   );
   expect(screen.getByText('Hello World')).toBeInTheDocument();
 });
@@ -19,7 +19,7 @@ test('HeroImage is dimmed when disabled', () => {
       backgroundImage="test.jpg"
       title="Hello World"
       disabled={true}
-    />
+    />,
   );
   expect(container.firstChild).toHaveStyle('opacity: 0.5');
 });

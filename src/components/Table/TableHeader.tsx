@@ -6,6 +6,8 @@ const StyledHeader = styled.thead`
   font-weight: bold;
 `;
 
-export const TableHeader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const TableHeader: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return <StyledHeader>{children}</StyledHeader>;
 };

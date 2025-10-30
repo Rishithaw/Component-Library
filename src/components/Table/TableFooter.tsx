@@ -6,6 +6,8 @@ const StyledFooter = styled.tfoot`
   font-weight: bold;
 `;
 
-export const TableFooter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const TableFooter: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return <StyledFooter>{children}</StyledFooter>;
 };

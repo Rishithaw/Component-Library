@@ -1,6 +1,6 @@
-import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom'
-import {Button} from './Button';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { Button } from './Button';
 
 test('renders Button with label', () => {
   render(<Button label="Test Button" />);

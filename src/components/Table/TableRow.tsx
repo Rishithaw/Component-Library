@@ -9,6 +9,8 @@ const StyledRow = styled.tr`
   }
 `;
 
-export const TableRow: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const TableRow: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return <StyledRow>{children}</StyledRow>;
 };
