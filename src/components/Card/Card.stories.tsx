@@ -19,7 +19,6 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   args: {
     title: 'Card Title',
-    content: 'This is a simple card component.',
     backgroundColor: '#fff',
     disabled: false,
   },
