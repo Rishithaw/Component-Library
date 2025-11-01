@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# Run Prettier check
+npx prettier --check .
+
+# Run ESLint check
+npx eslint src --ext .js,.jsx,.ts,.tsx
+
+# Run tests
+npm test -- --watchAll=false
+
+echo "✅ All checks passed!"

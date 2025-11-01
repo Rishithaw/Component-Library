@@ -10,6 +10,7 @@ test('renders Card with title and content', () => {
 
 test('renders disabled Card with grey background', () => {
   render(<Card title="Disabled" content="Not active" disabled />);
-  const card = screen.getByText('Not active').parentElement;
-  expect(card).toHaveStyle('background-color: #f5f5f5');
+  const card = screen.getByRole('region', { name: /Disabled/i });
+  const styles = getComputedStyle(card);
+  expect(styles.backgroundColor).toBe('rgb(245, 245, 245)');
 });

@@ -29,7 +29,12 @@ export const Card: React.FC<CardProps> = ({
   disabled,
 }) => {
   return (
-    <StyledCard backgroundColor={backgroundColor} disabled={disabled}>
+    <StyledCard
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+      role="region"
+      aria-label={title}
+    >
       {title && <h3>{title}</h3>}
       <p>{content}</p>
     </StyledCard>

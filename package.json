@@ -26,7 +26,8 @@
     "clean": "rm -rf node_modules build storybook-static",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -67,5 +68,17 @@
     "storybook": "^9.1.10",
     "typescript-eslint": "^8.46.2",
     "webpack": "^5.102.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --check",
+      "eslint --max-warnings=0",
+      "npm test -- --bail --findRelatedTests --passWithNoTests"
+    ]
   }
 }

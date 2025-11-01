@@ -29,9 +29,10 @@ export const HeroImage: React.FC<HeroImageProps> = ({
 }) => {
   return (
     <StyledHero
+      role="banner"
+      aria-label={title}
       $backgroundImage={backgroundImage}
       $disabled={disabled}
-      aria-disabled={disabled}
     >
       <h1>{title}</h1>
       {subtitle && <p>{subtitle}</p>}

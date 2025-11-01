@@ -11,15 +11,17 @@ test('renders HeroImage with title', () => {
     />,
   );
   expect(screen.getByText('Hello World')).toBeInTheDocument();
+  expect(screen.getByText('Subtext')).toBeInTheDocument();
 });
 
 test('HeroImage is dimmed when disabled', () => {
-  const { container } = render(
+  render(
     <HeroImage
       backgroundImage="test.jpg"
       title="Hello World"
       disabled={true}
     />,
   );
-  expect(container.firstChild).toHaveStyle('opacity: 0.5');
+  const hero = screen.getByRole('banner', { name: /Hello World/i });
+  expect(hero).toHaveStyle({ opacity: 0.5 });
 });
