@@ -1,0 +1,38 @@
+name: UI Component Library - CI Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4️⃣ Run Prettier check
+      - name: Run Prettier check
+        run: npx prettier --check .
+
+      # 5️⃣ Run ESLint check
+      - name: Run ESLint check
+        run: npm run lint
+
+      # 6️⃣ Run tests
+      - name: Run Jest tests
+        run: npm test -- --watchAll=false
