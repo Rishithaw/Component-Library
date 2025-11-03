@@ -8,13 +8,13 @@ WORKDIR /wickramasinghe_rishitha_ui_garden_build_checks
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Copy source code
 COPY . .
 
 # Run all quality checks before building
-RUN npm run lint && npm test -- --watchAll=false && npx prettier --check .
+RUN npm run lint && npm run prettier:check && npm test -- --watchAll=false
 
 # Build the React app (just to validate it compiles)
 RUN npm run build
@@ -26,10 +26,10 @@ RUN npm run build-storybook
 FROM nginx:alpine
 
 # Copy built app into nginx html directory
-COPY --from=build /wickramasinghe_rishitha_ui_garden_build_checks/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy Storybook static files into nginx html directory
-COPY --from=build /wickramasinghe_rishitha_ui_garden_build_checks/storybook-static /usr/share/nginx/html/storybook
+COPY --from=build /wickramasinghe_rishitha_ui_garden_build_checks/storybook-static /usr/share/nginx/html
 
 # Expose port 8018
 EXPOSE 8018

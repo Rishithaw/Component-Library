@@ -1,67 +1,50 @@
-# 📘 Assignment 12: Web Component Library
+# UI Component Library – Assignment 13
 
-**Author:** Rishitha Wickramasinghe
-**Course:** Business Systems Development
-**Assignment:** Component Library using React, Storybook & Docker
-
----
-
-## Overview
-
-This project is a **UI Component Library** built using **React**, **TypeScript**, **Styled Components** and **Storybook**.
-It demonstrates the ability to create, test, and deploy modular, reusable UI components in a containerized environment.
-
-The final application is packaged in a **Docker container** and served via **NGINX** on **localhost:8083**.
+**Student:** Rishitha Wickramasinghe
+**Course:** Business Systems Development – 3rd Semester
+**Assignment:** 13 – UI Component Library Build and CI/CD Automation
 
 ---
 
-## Features
+## 📘 Overview
 
-The component library includes the following **responsive and interactive components**:
+This project is a **React + TypeScript UI Component Library** designed to demonstrate:
 
-- **Button** (default & disabled states)
-- **Label**
-- **Text**
-- **Table**
-  - Table Header
-  - Table Row
-  - Table Cell
-  - Table Footer
-- **Dropdown**
-- **Radio Button**
-- **Image**
-- **Hero Image**
-- **Card**
+- Component reusability and modular design
+- Automated linting, formatting, and testing
+- Pre-commit validation using **Husky**
+- Continuous Integration via **GitHub Actions**
+- Containerization with **Docker**
 
-## Project Setup Instructions
+---
 
-### 1. Install Docker Desktop
-
-Make sure Docker Desktop is installed and running on your system.
-
-### 2. 📦 Clone the repository
+## Project Setup
 
 ```bash
-git clone <https://github.com/Rishithaw/Component-Library>
-cd component-library
+# Clone the repository
+git https://github.com/Rishithaw/Component-Library.git
+cd Component-Library
 
-### 3. Install Dependencies
-npm install
+# Install dependencies
+npm ci
 
-### 4. To view Storybook
-npm run Storybook
-(Visit http://localhost:6006)
+# Run ESLint (static code analysis)
+npm run lint
 
-### 5. Build the Docker image:
-docker build -t wickramasinghe_rishitha_coding_assignment12
+# Formats code for readability and uniform style.
+npm run prettier:check
+npm run prettier:write
 
-### 6. Run the container with the required name and port mapping:
-docker run -p 8083:8083 --name wickramasinghe_rishitha_coding_assignment12 wickramasinghe_rishitha_coding_assignment12
-
-### 7. Once the container starts, open a browser of your choice and visit:
-http://127.0.0.1:8083/
-(You should see all the components you saw in the storybook)
-
-### 8. To run tests
+# Run Jest tests
 npm test
+
+# Build the Docker image
+docker build -t wickramasinghe_rishitha_coding_assignment13 .
+
+# Run the container
+docker run -p 8018:8018 --name wickramasinghe_rishitha_coding_assignment13 wickramasinghe_rishitha_coding_assignment13
+
+# Once the container starts, open a browser of your choice and visit:
+http://127.0.0.1:8018/
+(You should see all the components you saw in the storybook)
 ```
