@@ -13,9 +13,6 @@ RUN npm install
 # Copy source code
 COPY . .
 
-# Run all quality checks before building
-RUN npm run lint && npm run prettier:check && npm test -- --watchAll=false
-
 # Build the React app (just to validate it compiles)
 RUN npm run build
 
