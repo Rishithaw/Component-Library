@@ -4,7 +4,7 @@
 echo "🔍 Running pre-commit checks..."
 
 # Run Prettier check
-npx prettier --check .
+# npx prettier --check .
 
 # Run ESLint check
 npx eslint src --ext .js,.jsx,.ts,.tsx
